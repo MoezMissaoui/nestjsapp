@@ -26,8 +26,8 @@ export class UserService {
         return { success: true };
     }
 
-    async updateUser(id: number, user: User) {
-        await this.UserDao.update({ id }, user);
+    async updateUser(user: User) {
+        await this.UserDao.update({ id:user.id }, user);
         return { success: true };
     }
 
